@@ -18,12 +18,12 @@
     <!-- Favicon icon-->
     <link
       rel="icon"
-      href="../../static/assets/images/favicon.png"
+      href="{% static 'assets/images/favicon.png' %}"
       type="image/x-icon"
     />
     <link
       rel="shortcut icon"
-      href="../../static/assets/images/favicon.png"
+      href="{% static 'assets/images/favicon.png' %}"
       type="image/x-icon"
     />
     <!-- Google font-->
@@ -33,9 +33,9 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&amp;display=swap"
       rel="stylesheet"
     />
-    {% include 'common/a000_styles_css_references.html' %}
-    {% block extra_css %} {% endblock %}
-    />
+    {% include 'common/a000_styles_css_references.html' %} 
+    {% block extra_css %}{% endblock %} 
+
   </head>
   <body>
     <!-- page-wrapper Start-->
@@ -49,18 +49,18 @@
       </div>
     </div>
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-      {% include 'common/a100_header.html' %}
+      {% include './common/a100_header.html' %}
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
         {% include 'common/a130_page_sidebar.html' %} 
-        {% block content' %} {% endblock %}
+        {% block content' %}{%endblock %} 
         {% include 'common/a150_footer.html' %}
       </div>
     </div>
-    {% include 'common/a001_scripts_js_references.html' %}
-    {% block extra_js %} {% endblock %}
+    {% include 'common/a001_scripts_js_references.html' %} 
+    {% block extra_js %}{% endblock %}
     <svg>
-      <use href="../../static/assets/svg/iconly-sprite.svg#Category"></use>
+      <use href="{% static 'assets/svg/iconly-sprite.svg' %}#Category"></use>
     </svg>
   </body>
 </html>

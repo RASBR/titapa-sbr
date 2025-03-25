@@ -1,10 +1,10 @@
-
+{% load static %}
 <!-- Cart Dropdown Start -->
 <li class="custom-dropdown">
   <a href="javascript:void(0)">
     <svg>
       <use
-        href="../../static/assets/svg/iconly-sprite.svg#cart-icon"
+        href="{% static 'assets/svg/iconly-sprite.svg' %}#cart-icon"
       ></use></svg></a
   ><span class="badge rounded-pill badge-primary">2</span>
   <div class="custom-menu cart-dropdown py-0 overflow-hidden">
@@ -14,7 +14,7 @@
         <div class="d-flex">
           <img
             class="img-fluid b-r-5 me-3 img-60"
-            src="../../static/assets/images/dashboard-2/1.png"
+            src="{% static 'assets/images/dashboard-2/1.png' %}"
             alt=""
           />
           <div class="flex-grow-1">
@@ -51,9 +51,7 @@
             <h6 class="font-primary">$500</h6>
           </div>
           <div class="close-circle">
-            <a class="bg-danger" href="#"
-              ><i data-feather="x"></i
-            ></a>
+            <a class="bg-danger" href="#"><i data-feather="x"></i></a>
           </div>
         </div>
       </li>
@@ -61,7 +59,7 @@
         <div class="d-flex">
           <img
             class="img-fluid b-r-5 me-3 img-60"
-            src="../../static/assets/images/dashboard-2/2.png"
+            src="{% static 'assets/images/dashboard-2/2.png' %}"
             alt=""
           />
           <div class="flex-grow-1">
@@ -98,9 +96,7 @@
             <h6 class="font-primary">$500.00</h6>
           </div>
           <div class="close-circle">
-            <a class="bg-danger" href="#"
-              ><i data-feather="x"></i
-            ></a>
+            <a class="bg-danger" href="#"><i data-feather="x"></i></a>
           </div>
         </div>
       </li>
@@ -110,9 +106,7 @@
         </h6>
       </li>
       <li class="text-center">
-        <a
-          class="d-block mb-3 view-cart f-w-700 text-primary"
-          href="cart.html"
+        <a class="d-block mb-3 view-cart f-w-700 text-primary" href="cart.html"
           >Go to your cart</a
         ><a
           class="btn btn-primary view-checkout text-white"

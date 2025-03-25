@@ -16,9 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views  # Import views from core
+from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
+from . import views  # Import the views module
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),  # Add landing page route
+    # Landing page - can use either TemplateView or the function view
+    path('', views.home, name='home'),
+    # Alternatively, you can use TemplateView:
+    # path('', TemplateView.as_view(template_name='index.html'), name='home'),
 ]
+
+# Add static file serving during development
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
