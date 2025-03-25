@@ -18,7 +18,7 @@
 
     <title>{% block title %}Application Title{% endblock %}</title>
     
-    {% include './common/a000_styles_css_references.html' %} 
+    {% include 'common/a000_styles_css_references.html' %} 
     {% block extra_css %}{% endblock %} 
   </head>
   <body>
@@ -33,12 +33,12 @@
       </div>
     </div>
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-      {% include './common/a100_header.html' %}
+      {% include 'common/a100_header.html' %}
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
-        {% include './common/a130_page_sidebar.html' %} 
-        {% block content %}{%endblock %} 
-        {% include './common/a150_footer.html' %}
+        {% include 'common/a130_page_sidebar.html' %} 
+        {% block content %}{% endblock %} 
+        {% include 'common/a150_footer.html' %}
       </div>
     </div>
     {% include 'common/a001_scripts_js_references.html' %} 
