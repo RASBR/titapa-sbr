@@ -23,10 +23,8 @@ from . import views  # Import the views module
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Landing page - can use either TemplateView or the function view
-    path('', views.home, name='home'),
-    # Alternatively, you can use TemplateView:
-    # path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    # Landing page 
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
 ]
 
 # Add static file serving during development

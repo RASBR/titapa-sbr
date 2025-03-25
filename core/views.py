@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-def home(request):
-    """
-    View for the home page
-    """
+def index(request):
+
     return render(request, 'index.html')
